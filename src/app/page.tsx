@@ -4,7 +4,7 @@ import LandingPage from "./LandingPage";
 
 export default async function Page() {
   const cookieStore =  await cookies();
-  const supabase = createClient(cookieStore);
+  const supabase =  createClient(cookieStore);
 
   // Fetch current user authentication status
   const { data: { user } } = await supabase.auth.getUser();
