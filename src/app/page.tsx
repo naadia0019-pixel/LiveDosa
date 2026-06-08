@@ -12,7 +12,7 @@ export default async function Page() {
   // Fetch user's past flight logs (represented by the 'todos' table rows)
   let todos: any[] = [];
   if (user) {
-    const { data, error } = await supabase
+    const { data, error } =  await supabase
       .from("todos")
       .select()
       .order("id", { ascending: false });
