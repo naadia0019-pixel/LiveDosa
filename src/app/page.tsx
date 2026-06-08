@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import LandingPage from "./LandingPage";
 
 export default async function Page() {
-  const cookieStore = await cookies();
+  const cookieStore =  await cookies();
   const supabase = createClient(cookieStore);
 
   // Fetch current user authentication status
